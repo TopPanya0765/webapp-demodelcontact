@@ -1,0 +1,28 @@
+.bg {
+    min-height: 100%;
+    /*min-width: 1024px;*/
+
+    width: 100%;
+    /* height: auto; */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+.gbutton {
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    
+}
+
+ @media screen and (max-width: 600px) {
+    /* .bg {
+        left: 50%;
+        margin-left: -512px;
+    } */
+    .gbutton {
+        left: 20%;
+    }
+} 
