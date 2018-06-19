@@ -5,8 +5,15 @@
   "dependencies": {
     "create-react-class": "^15.6.3",
     "react": "^16.4.1",
+    "react-burger-menu": "^2.5.2",
+    "react-desktop": "^0.3.5",
     "react-dom": "^16.4.1",
     "react-google-button": "^0.5.3",
+    "react-google-login": "^3.2.1",
+    "react-google-login-component": "^0.9.3",
+    "react-icon": "^1.0.0",
+    "react-icons": "^2.2.7",
+    "react-push-menu": "^0.3.0",
     "react-router-dom": "^4.3.1",
     "react-router-link": "^2.0.2",
     "react-scripts": "1.1.4"

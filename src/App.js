@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import background from './background.png'
-import './App.css';
-import './image.css';
-import GoogleButton from 'react-google-button'
-import { Redirect } from 'react-router-dom'
+
+import Routes from './Routes';
+import Login from './components/Login/Login';
 
 class App extends Component {
   render() {
     return (  
       <div>
-        <img src={background} className="bg"/>
-        <h1 className="App-title">tangerine</h1>
-        <GoogleButton type = "light" className="gbutton" onClick={() => {   }}/>
+        <Routes/>
       </div>
       // <div className="App">
       //   <header className="App-header">

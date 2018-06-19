@@ -1,0 +1,40 @@
+.login-bg {
+    min-height: 100%;
+    /*min-width: 1024px;*/
+    width: 100%;
+    /* height: auto; */
+    position: fixed;
+    top: 0;
+    left: 0;   
+}
+.login-title {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.login-gbutton {
+    position: absolute;
+    left: 40%;
+    top: 60%;  
+}
+
+@media screen and (min-width: 601px) {
+    .login-title {
+      font-size: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* .bg {
+        left: 50%;
+        margin-left: -512px;
+    } */
+    .login-title {
+        font-size: 50px;
+    }
+    .login-gbutton {
+        left: 20%;
+    }
+} 
+
