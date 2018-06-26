@@ -1,37 +1,38 @@
-.home-main {
-    /* overflow:hidden; */
-    width: 100%;
-    transition: all 500ms linear;
-}
-.home-main.active {
-    margin-left: 200px;
-    transition: all 500ms linear;
-    width: calc(100% - 200px);
-}
-.home-title-bg {
+.contactsearch-title-bg {
     top: 0%;
-    max-height: 250px;
+    max-height: 100px;
     width: 100%;
 }
-.home-title-text {
+.contactsearch-title-text {
     position: absolute;
-    top: 8%;
+    top: 0%;
     left: 40%; 
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     transition: all 500ms linear;
 }
-.home-title-text.active {
+.contactsearch-title-text.active {
     left: 50%;
+    transition: all 500ms linear;
 }
-.home-head-text {
+.contactsearch-head-text {
+    margin-left: 100px;
+    margin-top: 50px;
     font-size: 30px;
-    text-align: center;
+    color: black;
+    margin-bottom: 50px;
 }
-.home-icons {
-    display: inline-block;
-    margin-left: 160px;
-    margin-top: 30px;
+.auditlog-main {
+    /* overflow:hidden; */
+    width: 100%;
+    transition: all 500ms linear;
+    background-color: #EFEFEF;
+    background-size: 100%;
+}
+.auditlog-main.active {
+    margin-left: 200px;
+    transition: all 500ms linear;
+    width: calc(100% - 200px);
 }
 .home-sidebar {
     position: fixed;
@@ -138,6 +139,3 @@
     left: 20px;
     transition: all 500ms linear;
 }
-
-
-

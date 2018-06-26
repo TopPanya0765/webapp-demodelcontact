@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import './Login.css';
 import GoogleButton from 'react-google-button'
-import {Redirect} from 'react-router-dom'
 
 class GoogleLogin extends Component{
     constructor(props) {
@@ -27,7 +26,7 @@ class GoogleLogin extends Component{
             callback: function(authResponse) {
                 this.googleSignInCallback( authResponse )
             }.bind( this ),
-            clientid: "665957642249-qfmv28lunsn34m7oeu0op631l5goq5q5.apps.googleusercontent.com",
+            clientid: "381868669598-k2v7qiv4ckthuc20vio636rrcli7p9o1.apps.googleusercontent.com",
             cookiepolicy: "single_host_origin",
             requestvisibleactions: "http://schema.org/AddAction",
             scope: "https://www.googleapis.com/auth/userinfo.profile"//"https://www.googleapis.com/auth/plus.login email"
@@ -63,7 +62,7 @@ class GoogleLogin extends Component{
                 // alert("Successfull login from google : "+ e.displayName )
                 console.log( e );
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'http://localhost:3000/token');
+                xhr.open('POST', 'http://localhost:3000');
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.onload = function() {
                     console.log('Signed in as: ' + xhr.responseText);
