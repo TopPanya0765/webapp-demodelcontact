@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import "./AuditLog.css"
 
 import {Link} from 'react-router-dom'
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 import background from "./background.png"
 import profilePic from "./profilepic.png"
@@ -12,10 +13,28 @@ import profileIcon from "./profileicon.png"
 import searchIcon from "./searchicon.png"
 import logIcon from "./logicon.png"
 import outIcon from "./outicon.png"
-
 import action from "./action.png"
+import filter from "./filter.png"
+
+import SelectDate from "./SelectDate"
+import SearchBox from "./SearchBox"
+import DropDown from "./DropDown"
 
 class AuditLog extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          popoverOpen: false
+        };
+      }
+    
+      toggle() {
+        this.setState({
+          popoverOpen: !this.state.popoverOpen
+        });
+      }
     handleClick() {
         document.getElementById("slidebar").classList.toggle("active");
         document.getElementById("toggle-btn").classList.toggle("active");
@@ -56,6 +75,14 @@ class AuditLog extends Component {
                     <img src={background} className="contactsearch-title-bg"/>
                     <h1 id="title" className="contactsearch-title-text">tangerine</h1>
                     <h2 id="head" className="contactsearch-head-text">Audit Log</h2>
+                    <div>
+                        <img src={filter} id="Popover1" className="auditlog-filter" onClick={this.toggle}/>
+                        <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+                        <PopoverHeader><SelectDate /></PopoverHeader>
+                        <PopoverHeader>User <SearchBox /></PopoverHeader>
+                        <PopoverHeader><DropDown /></PopoverHeader>
+                        </Popover>
+                    </div>
                     <table class="table table-sm table-bordered table-hover">
                         <thead class="thead-dark">
                             <tr>
