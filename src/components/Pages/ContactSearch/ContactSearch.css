@@ -1,0 +1,63 @@
+.contactsearch-title-bg {
+    top: 0%;
+    max-height: 100px;
+    width: 100%;
+}
+.contactsearch-title-text {
+    position: absolute;
+    top: 0%;
+    left: 40%; 
+    font-size: 40px;
+    color: white;
+    transition: all 500ms linear;
+}
+.contactsearch-title-text.active {
+    left: 50%;
+    transition: all 500ms linear;
+}
+.contactsearch-gray-bg {
+    background-color: gray;
+}
+.contactsearch-head-text {
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: black;
+}
+.contactsearch-search-box {
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+.contactsearch-search-icon {
+    position: absolute;
+    margin-left: 470px;
+    top: 40%;
+}
+.contactsearch-main {
+    overflow:hidden;
+    width: 100%;
+    transition: all 500ms linear;
+    background-color: #EFEFEF;
+}
+.contactsearch-main.active {
+    margin-left: 200px;
+    transition: all 500ms linear;
+    width: calc(100% - 200px);
+}
+.toggle-btn {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    transition: all 500ms linear;
+}
+.toggle-btn.active {
+    left: 230px;
+    transition: all 500ms linear;
+}
+
+
+
+
+

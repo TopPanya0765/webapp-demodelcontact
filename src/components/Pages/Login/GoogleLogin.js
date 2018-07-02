@@ -34,7 +34,7 @@ class GoogleLogin extends Component{
     }
     
     googleSignInCallback = (e) => {
-        console.log( e )
+        //console.log( e )
         if (e["status"]["signed_in"]) {
             window.gapi.client.load("plus", "v1", function() {
                 if (e["access_token"]) {
@@ -62,21 +62,21 @@ class GoogleLogin extends Component{
                 // alert("Successfull login from google : "+ e.displayName )
                 console.log( e );
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'http://localhost:3000');
+                xhr.open('POST', 'http://localhost:3000/test');
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.onload = function() {
                     console.log('Signed in as: ' + xhr.responseText);
                 };
                 xhr.send('idtoken=' + [accesstoken]);
                 console.log([accesstoken]);
-                return
+                return window.location.href="/home"
             }
         }.bind(this));
     }
     
-    render(){
+    render() {
         return(
-            <GoogleButton type = "light" className="login-gbutton" onClick={ () => this.googleLogin() }/>
+            <GoogleButton type = "light" className="login-gbutton" onClick={ () => this.googleLogin()}/>
         )
     }
 }
